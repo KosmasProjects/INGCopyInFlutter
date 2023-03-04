@@ -29,7 +29,41 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               width: double.infinity,
               height: 72,
-              child: Image(image: AssetImage('assets/images/ING_logo.jpg')),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/images/INGLOGO.png',
+                      scale: 16,
+                    ),
+                    SizedBox(width: 5),
+                    Text('Moje ING'),
+                    Spacer(),
+                    Container(
+                      height: 25,
+                      width: 80,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.purple),
+                          elevation: 0,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
+                            ),
+                          ),
+                          backgroundColor: Colors.white,
+                        ),
+                        child: Text(
+                          'Zaloguj',
+                          style: TextStyle(fontSize: 14, color: Colors.purple),
+                        ),
+                        onPressed: () {},
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
           SingleChildScrollView(
