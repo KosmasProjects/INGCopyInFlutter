@@ -74,6 +74,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/kosmacieliczko/.pub-cache/hosted/pub.dev/intl-0.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///Users/kosmacieliczko/.pub-cache/hosted/pub.dev/js-0.6.5",
       "packageUri": "lib/",
@@ -140,6 +146,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///Users/kosmacieliczko/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-20.4.52",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "syncfusion_flutter_gauges",
+      "rootUri": "file:///Users/kosmacieliczko/.pub-cache/hosted/pub.dev/syncfusion_flutter_gauges-20.4.52",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/kosmacieliczko/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -164,7 +182,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-04T20:45:39.140896Z",
+  "generated": "2023-03-04T22:26:41.255584Z",
   "generator": "pub",
   "generatorVersion": "2.19.2"
 }

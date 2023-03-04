@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fridge/customClasses/textstyles.dart';
 import 'package:fridge/customClasses/widgets.dart';
 import 'package:circle_list/circle_list.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -54,21 +56,13 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
-                  SizedBox(height: 100),
                   CircleList(
-                    origin: const Offset(-100, 0),
-                    innerRadius: 100,
-                    initialAngle: 5,
-                    centerWidget: ClipRRect(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(100)),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange),
-                      ),
-                    ),
-                    rotateMode: RotateMode.onlyChildrenRotate,
+                    origin: const Offset(-120, 0),
+                    innerRadius: 90,
+                    outerRadius: 230,
+                    initialAngle: 5.5,
+                    centerWidget: ClipRRect(child: CircleMenu()),
+                    rotateMode: RotateMode.stopRotate,
                     children: List.generate(8, (index) {
                       if (index == 0) {
                         return SmallCircle(
@@ -94,12 +88,6 @@ class _HomePageState extends State<HomePage> {
                             title: 'Szybki przelew',
                             icon: Icons.arrow_back_sharp,
                             ontap: () {});
-                      }
-                      if (index == 4) {
-                        return SmallCircle(
-                            title: 'Blik',
-                            icon: Icons.card_travel,
-                            ontap: () {});
                       } else {
                         return Container();
                       }
@@ -116,16 +104,91 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class CircleMenu extends StatelessWidget {
+class CircleMenu extends StatefulWidget {
   const CircleMenu({super.key});
 
   @override
+  State<CircleMenu> createState() => _CircleMenuState();
+}
+
+class _CircleMenuState extends State<CircleMenu> {
+  @override
   Widget build(BuildContext context) {
     return Container(
+      width: 180,
+      height: 180,
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: Colors.grey),
         borderRadius: BorderRadius.circular(100),
-        color: Colors.white,
+        color: Color(0xffEF6113),
+      ),
+      child: SfRadialGauge(
+        axes: <RadialAxis>[
+          RadialAxis(
+            showLabels: false,
+            showTicks: false,
+            startAngle: 270,
+            endAngle: 270,
+            minimum: 0,
+            maximum: 100,
+            radiusFactor: .9,
+            showAxisLine: true,
+            axisLineStyle: const AxisLineStyle(
+                dashArray: [2, 3],
+                color: Colors.white,
+                thicknessUnit: GaugeSizeUnit.factor,
+                thickness: 0.03),
+            pointers: <GaugePointer>[
+              RangePointer(
+                  value: 45,
+                  cornerStyle: CornerStyle.bothCurve,
+                  enableAnimation: true,
+                  animationDuration: 1200,
+                  animationType: AnimationType.ease,
+                  sizeUnit: GaugeSizeUnit.factor,
+                  color: Colors.white,
+                  width: 0.03),
+            ],
+            annotations: <GaugeAnnotation>[
+              GaugeAnnotation(
+                  angle: 0,
+                  positionFactor: .5,
+                  widget: Row(
+                    children: <Widget>[
+                      Container(
+                        width: 100,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.wallet_outlined,
+                                size: 40,
+                                color: Colors.white,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  '45%',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontFamily: "PTS",
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              Text(
+                                'Konto Direct',
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ]),
+                      ),
+                    ],
+                  )),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -157,12 +220,15 @@ class SmallCircle extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(icon),
+              Icon(
+                icon,
+                color: const Color(0xffEF6113),
+              ),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
                   title,
-                  style: TextStyle(fontWeight: FontWeight.w100),
+                  style: const TextStyle(fontWeight: FontWeight.w100),
                   textAlign: TextAlign.center,
                 ),
               )
