@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.orange),
                       ),
                     ),
-                    rotateMode: RotateMode.allRotate,
+                    rotateMode: RotateMode.onlyChildrenRotate,
                     children: List.generate(8, (index) {
                       if (index == 0) {
                         return SmallCircle(
