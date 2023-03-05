@@ -24,14 +24,6 @@
 		<data>
 		d3AEz+taV/3PEx9uoohACicnFZg=
 		</data>
-		<key>flutter_assets/assets/images/ING_logo.jpg</key>
-		<data>
-		RvzzetmEuJMSXDTFm46x31hBXcQ=
-		</data>
-		<key>flutter_assets/assets/images/logo.png</key>
-		<data>
-		fWCWPs00q3oQXv+ekRFEH1tIWJA=
-		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
 		/CUoTuPQqqdexfyOT9lpJhV+2MQ=
@@ -46,7 +38,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		lcc4+DnqcDINdfSnlAc9qqCLpyw=
+		MEmTbUC0NZ2yR+4LgZOcuBHlnaA=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -91,20 +83,6 @@
 			HzU/6VNAusTqsRa0G1I/4U6JVMP4ubblWDWA9UTBboI=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/images/ING_logo.jpg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9nJ4i0ORwZE5nQ9iPNamRokVOwbdzgTa83Y5urfuVcM=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/images/logo.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ye64UbbvXffmIhg273cNOW/k7NADwysfNkmePCMEMwY=
-			</data>
-		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<dict>
 			<key>hash2</key>
@@ -130,7 +108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AKyad+3ip/EPV7v5YfRH/iQqf8ha/fdcj4Oe39gSlsE=
+			/XkvbaOYfYQ0sgret53wy7f6Pv7yruzbNAWW9L0CWrs=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
