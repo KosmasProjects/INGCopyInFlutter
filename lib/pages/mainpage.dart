@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Image.asset(
                       'assets/images/INGLOGO.png',
-                      scale: 16,
+                      scale: 16, 
                     ),
                     SizedBox(width: 8),
                     Text(
